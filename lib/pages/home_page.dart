@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget{
   @override
@@ -10,7 +11,63 @@ class HomePage extends StatelessWidget{
         )
       ),
       body: Center(
-        child:Text("HOLA MUNDO"),
+        child: Container(
+          width:300,
+          height: 100,
+          alignment: Alignment.center,
+          margin: EdgeInsets.only(left: 5, top: 25, right: 15, bottom: 10 ),
+          padding: EdgeInsets.only(left: 40, top: 8, right: 25, bottom: 15 ),
+          decoration: BoxDecoration(
+            color:Colors.black12,
+            borderRadius: BorderRadius.only(
+               topLeft: Radius.circular(50),
+              topRight: Radius.circular(50),
+              bottomLeft: Radius.circular(50),
+              bottomRight: Radius.circular(50)
+            ),
+            /*
+              boxShadow: [
+              BoxShadow(
+                color: Colors.redAccent,
+                blurRadius: 40,
+                offset: Offset(20,20),
+              )
+            ],
+             */
+            gradient: LinearGradient(
+              colors:[
+                Colors.blue,
+                Colors.red,
+                Colors.green
+              ]
+            )
+          ),
+          child:Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing:2,
+                  decoration: TextDecoration.underline,
+                  height:1.5,
+                  shadows: [
+                    Shadow(
+                        color: Colors.black45,
+                        offset: Offset(3,3),
+                        blurRadius: 2
+                    ),
+                    Shadow(
+                        color:Colors.red,
+                        offset: Offset(2,2),
+                        blurRadius: 2
+                    )
+                  ]
+              )
+          ),
+        )
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
